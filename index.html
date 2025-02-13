@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? ❤️</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    
+    <div class="valentine-container">
+        <h1 class="valentine-message">Will you be my Valentine? 💖</h1>
+        <div class="buttons">
+            <button class="yes-btn" onclick="goToLovePage()">Yes 💘</button>
+            <button class="no-btn" onclick="moveNoButton()">No 💔</button>
+        </div>
+    </div>
+
+    <script>
+        function goToLovePage() {
+            window.location.href = "love.html"; 
+        }
+
+        function moveNoButton() {
+            let button = document.querySelector(".no-btn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.position = "absolute";
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
